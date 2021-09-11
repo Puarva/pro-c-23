@@ -1,0 +1,21 @@
+class Package {
+    constructor(x, y, width, height) {
+      var options = {
+          'isStatic':false
+      }
+      this.body = Bodies.circle(width/2, 50,200,200, options);
+      this.width = width;
+      this.height = height;
+      
+      World.add(world, this.body);
+    }
+    display(){
+      var pos =this.body.position;
+      var angle = this.body.angle;
+      
+      rectMode(CENTER);
+      fill("red");
+      rect(pos.x, pos.y, this.width, this.height);
+      
+    }
+  };
